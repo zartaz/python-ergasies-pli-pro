@@ -15,6 +15,7 @@ def ask_matrix_length():
 
 
 def robot_move(length):
+    global robot_x, robot_y
     while True:
         move = input("Δώσε την κίνηση του ρομπότ: ")
         if move == "":
@@ -63,8 +64,12 @@ def robot_move(length):
         print(f"Το ρομπότ βρίσκεται στη θέση ({robot_x},{robot_y})")
 
 
-robot_move(10)
+def main():
+    length = ask_matrix_length()
+    robot_move(length)
 
+
+main()
 
 
 
